@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emojis</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3 class="btn btn-warning btn-lg">Emoción a Emoji
+        <br>😀 😕 😡 🤨 🤔 😮 😐
+    </h3>
+    <p>Toma tu foto para generar un emoji</p>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        <p>Vista de la cámara web</p>
+        <div id="camara"></div>
+        <br>
+        <button class="btn btn-danger" onclick="tomarFoto()">Tomar foto</button>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        <label>Predicción 1</label>
+        <p id="emocion1"></p><span id="emoji1"></span>
+        <br>
+        <label>Predicción 2</label>
+        <p id="emocion2"></p><span id="emoji2"></span>
+    </div> 
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        <p>Captura de la camara</p>
+        <div id="captura"></div>
+        <br>
+        <button class="btn btn-danger" onclick="analizarFoto()">Predecir emoción</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
